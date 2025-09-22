@@ -32,7 +32,10 @@ axios
   });
 
 function printUser(user: User) {
-  console.log("이름: ", user.name);
-  console.log("이메일: ", user.email);
-  console.log("전화: ", user.phone);
+  // console.log("이름: ", user.name);
+  // console.log("이메일: ", user.email);
+  // console.log("전화: ", user.phone);
 }
+
+const arrayDiff = _.difference([1, 2, 3], [2, 4]);
+console.log(arrayDiff);
