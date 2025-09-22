@@ -25,8 +25,14 @@ axios
   .get<User>("https://jsonplaceholder.typicode.com/users/1")
   .then((res) => {
     const { data } = res;
-    console.log(res.data);
+    printUser(res.data);
   })
   .catch((reason) => {
     console.error("get 오류", reason);
   });
+
+function printUser(user: User) {
+  console.log("이름: ", user.name);
+  console.log("이메일: ", user.email);
+  console.log("전화: ", user.phone);
+}
