@@ -22,7 +22,7 @@ interface User {
 }
 
 axios
-  .get<boolean>("https://jsonplaceholder.typicode.com/users/1")
+  .get<User>("https://jsonplaceholder.typicode.com/users/1")
   .then((res) => {
     const { data } = res;
     console.log(res.data);
