@@ -22,10 +22,9 @@ interface User {
 }
 
 axios
-  .get<User>("https://jsonplaceholder.typicode.com/users/1")
+  .get<User[]>("https://jsonplaceholder.typicode.com/users")
   .then((res) => {
-    const { data } = res;
-    printUser(res.data);
+    res.data.forEach(printUser);
   })
   .catch((reason) => {
     console.error("get 오류", reason);
